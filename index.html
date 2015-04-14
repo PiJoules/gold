@@ -14,7 +14,7 @@
 		<div class="container">
 			<div class="row" style="margin-top: 100px;">
 				<div class="col-sm-6 col-sm-offset-3" style="background-color: rgba(0,0,0,0.8); color: white;">
-					<h1>
+					<h1 id="quote">
 						Its too late to be at work.<br>
 						Its too early to be at home.<br>
 						Just the right time to browse dank memes.
@@ -26,5 +26,22 @@
 		</div>
 
 		<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript">
+			var quotes = [
+				"Its too late to be at work.<br>" + 
+				"Its too early to be at home.<br>" + 
+				"Just the right time to browse dank memes.",
+
+				"Now that I'm done using the urination station,<br>" +
+				"I'm ready to watch anime."
+			];
+
+			$("#quote").html(randElem(quotes));
+
+			function randElem(items){
+				return items[Math.floor(Math.random()*items.length)];
+			}
+		</script>
 	</body>
 </html>
